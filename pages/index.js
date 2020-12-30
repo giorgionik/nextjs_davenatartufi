@@ -1,65 +1,86 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React, { useState } from 'react'
+import Header from './components/header'
+import SimpleSlider from './components/carousel'
+import Link from 'next/link'
 
 export default function Home() {
+
+  
+
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>D'Avena Tartufi</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charset="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Header></Header>
+      <div className="bg-darker pb-10">
+        <div className="bg-darker pt-20 md:grid md:grid-cols-2">
+          <div className="px-5 md:pl-0 md:col-start-2">
+            <div className="border-l-2 border-davena pl-7 pb-5">
+              <h2 className="text-3xl py-5">Chi siamo</h2>
+              <p className="text-xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
+              </p>
+            </div>
+          </div>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <div className="bg-darker px-10 md:px-10 py-10 md:pt-0 md:py-0 md:col-start-1 md:row-start-1 md:col-span-1">
+            <img
+              className=""
+              src="https://res.cloudinary.com/niknet/image/upload/v1609063080/davena%20tartufi/Screenshot_2020-12-27_at_10.56.33_jemyoj.png"
+              alt="marko zobenica ceo"
+            />
+          </div>
         </div>
-      </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        {/* <div className="md:border-2 md:border-davena md:flex md:m-10">
+          <div className="px-5">
+            <div className="border-r-2 border-davena md:border-none px-5 pb-5">
+              <h2 className="text-3xl py-5">I nostri prodotti</h2>
+              <p className="text-xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
+              </p>
+            </div>
+          </div>
+
+          <img
+            className="hidden md:block w-80"
+            src="https://res.cloudinary.com/niknet/image/upload/v1609066788/davena%20tartufi/Screenshot_2020-12-27_at_11.59.07_sxpwdf.png"
+            alt="Marko Zobenica ceo"
+          />
+        </div>*/}
+        
+      </div> 
+
+      <SimpleSlider></SimpleSlider>
     </div>
-  )
+  );
 }
