@@ -23,7 +23,7 @@ import Link from 'next/link'
       console.log(products)
     return (
         <div>
-
+            <div><h2>Il prodotto</h2></div>
             <ul>
                 {products.map(product => (
                     <li key={product.sys.id}>
