@@ -32,7 +32,7 @@ export default function Home() {
           <div className="px-5 md:pl-0 md:col-start-2">
             <div className="border-l-2 border-davena pl-7 pb-5">
               <h2 className="text-3xl py-5">Chi siamo</h2>
-              <p className="text-xl">
+              <p className="mini:text-base text-xl">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -77,7 +77,7 @@ export default function Home() {
             alt="Marko Zobenica ceo"
           />
         </div>*/}
-        
+
       </div> 
 
       <SimpleSlider></SimpleSlider>

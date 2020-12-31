@@ -23,7 +23,7 @@ export default function Navigation() {
     return (
       <div>
         <nav className="flex items-center justify-between md:justify-center">
-          <h1 className="text-white text-4xl mx-5 md:hidden">
+          <h1 className="text-white text-4xl mx-5 md:hidden mini:text-2xl">
             <span className="text-davena">D'avena</span> Tartufi
           </h1>
 
@@ -70,12 +70,20 @@ export default function Navigation() {
                       </Link>
                     </li>
                     <li className="pb-3">
-                      <Link href="/prodotti">
+                      <Link href="/chisiamo">
                         <a>Chi siamo</a>
                       </Link>                      
                     </li>
-                    <li className="pb-3">Prodotti</li>
-                    <li className="pb-3">Contatto</li>
+                    <li className="pb-3">
+                      <Link href="/prodotti">
+                        <a>Prodotti</a>
+                      </Link>  
+                    </li>
+                    <li className="pb-3">
+                    <Link href="/contatto">
+                        <a>Contatto</a>
+                    </Link>                       
+                    </li>
                   </ul>
                 </animated.div>
               )

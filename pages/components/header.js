@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Header() {
     return (
       <div>
-          <header className="bg-hero-home bg-no-repeat bg-center bg-cover">
+          <header className="bg-hero-home mini:bg-hero-home-mini bg-no-repeat bg-center bg-cover">
             <Navigation></Navigation>
             <h2 
                 className="md:hidden text-base px-5 pb-5 -mt-5 fill-current text-white"
@@ -15,7 +15,7 @@ export default function Header() {
             </h2>
             <img
               className="mx-auto h-44 w-44 -mb-24 md:mb-0 md:flex md:mx-auto md:h-52 md:w-52 z-40 relative"
-              src="https://res.cloudinary.com/niknet/image/upload/v1609029132/davena%20tartufi/logo_1.0_ytchyw.png"
+              src="https://res.cloudinary.com/niknet/image/upload/q_auto:low/v1609429670/davena%20tartufi/logo_1.0_comp_a5tgju.png"
               alt="logo icon"
             />
             <h2 
