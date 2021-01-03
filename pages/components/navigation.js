@@ -23,11 +23,11 @@ export default function Navigation() {
     return (
       <div>
         <nav className="flex items-center justify-between md:justify-center">
-          <h1 className="text-white text-4xl mx-5 md:hidden mini:text-2xl">
-            <span className="text-davena">D'avena</span> Tartufi
+          <h1 className="font-playfair text-white text-4xl mx-5 md:hidden mini:text-2xl">
+            <span className="text-davena">D'Avena</span> Tartufi
           </h1>
 
-          <ul className="hidden md:flex md:w-4/6 md:justify-between md:my-1 text-white">
+          <ul className="hidden md:flex md:w-4/6 md:justify-between md:mt-1 md:mb-20 text-white text-xl font-sourcesans">
             <li className="border-2 border-davena p-2 my-8">Home</li>
             <li className="border-2 border-davena p-2 my-8">Chi siamo</li>
             <li className="border-2 border-davena p-2 my-8">Prodotti</li>

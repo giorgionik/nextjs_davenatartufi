@@ -11,7 +11,7 @@ import Link from 'next/link'
   export async function getStaticProps() {
       let data = await client.getEntries({
           'content_type': 'product',
- 
+          'fields.primoPiano': 'false',
 
       })
      
@@ -23,7 +23,7 @@ import Link from 'next/link'
           revalidate: 1,
       };
   }
-  export default function Prodotti({products}) {
+  export default function test({products}) {
       console.log(products);
     return (
         <div>

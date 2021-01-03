@@ -32,6 +32,17 @@ export async function getStaticProps({ params }){
 export default function Prodotti({ product }){
     if(!product) return <div>404</div>;
 
-    console.log(product)
-    return <div>{product.fields.nomeProdotto}</div>
+
+    return (
+
+        <div>
+            <h2>{product.fields.nomeProdotto}</h2>
+            
+            <img src={`https:${product.fields.foto.fields.file.url}`}/>
+            
+        </div>
+
+    )
+
+    
 }

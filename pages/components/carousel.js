@@ -1,18 +1,30 @@
 import React from "react";
 import Slider from "react-slick";
+import Link from 'next/link'
  
 
-
  
-export default function SimpleSlider() {
+export default function SimpleSlider(props) {
+
+    console.log(props.prodotti);
+
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     responsive: [
         {
+            breakpoint: 1280,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
           breakpoint: 1024,
           settings: {
             slidesToShow: 3,
@@ -39,103 +51,35 @@ export default function SimpleSlider() {
       ]
   };
   return (
-    <div className="mx-5 mb-10 px-7 py-5">
+   
+<div className="mx-16">
+
+
+
     <Slider {...settings}>
 
 
 
-      
-        <div class="sm:w-1/4 p-1 focus:outline-none">
-            <div class="px-4 py-6 text-center">
+        {props.prodotti.map(product => (
+
+        <div key={product.sys.id} class="sm:w-1/4 px-8 focus:outline-none">
+            
+            <div class="px-1 py-6 text-center">
             <div class="mb-2">
                 <img
-                class="w-auto mx-auto rounded-full"
-                src="https://i.pravatar.cc/190?img=58"
-                alt=""
+                class="rounded-full h-auto w-auto"
+                src={`https:${product.fields.foto.fields.file.url}`}
+                alt={product.fields.foto.fields.title}
                 />
             </div>
-            <h2 class="text-xl pt-2 font-medium text-gray-700">Pande Muliada</h2>
-            {/* <span class="text-blue-500 block mb-5">Front End Developer</span> */}
+            <Link href={"/prodotti/" + product.fields.slug }>
+            <a><h2 class="font-sourcesans text-xl pt-2 font-medium text-gray-700">{product.fields.nomeProdotto}</h2></a>
+            </Link>
             </div>
+            
         </div>
+        ))}
 
-
-        <div class="sm:w-1/4 p-1 focus:outline-none">
-            <div class="px-4 py-6 text-center">
-            <div class="mb-2">
-                <img
-                class="w-auto mx-auto rounded-full"
-                src="https://i.pravatar.cc/190?img=58"
-                alt=""
-                />
-            </div>
-            <h2 class="text-xl pt-2 font-medium text-gray-700">Pande Muliada</h2>
-            {/* <span class="text-blue-500 block mb-5">Front End Developer</span> */}
-            </div>
-        </div>
-
-
-        <div class="sm:w-1/4 p-1 focus:outline-none">
-            <div class="px-4 py-6 text-center">
-            <div class="mb-2">
-                <img
-                class="w-auto mx-auto rounded-full"
-                src="https://i.pravatar.cc/190?img=58"
-                alt=""
-                />
-            </div>
-            <h2 class="text-xl pt-2 font-medium text-gray-700">Pande Muliada</h2>
-            {/* <span class="text-blue-500 block mb-5">Front End Developer</span> */}
-            </div>
-        </div>
-
-
-
-        <div class="sm:w-1/4 p-1 focus:outline-none">
-            <div class="px-4 py-6 text-center">
-            <div class="mb-2">
-                <img
-                class="w-auto mx-auto rounded-full"
-                src="https://i.pravatar.cc/190?img=58"
-                alt=""
-                />
-            </div>
-            <h2 class="text-xl pt-2 font-medium text-gray-700">Pande Muliada</h2>
-            {/* <span class="text-blue-500 block mb-5">Front End Developer</span> */}
-            </div>
-        </div>
-
-
-
-        <div class="sm:w-1/4 p-1 focus:outline-none">
-            <div class="px-4 py-6 text-center">
-            <div class="mb-2">
-                <img
-                class="w-auto mx-auto rounded-full"
-                src="https://i.pravatar.cc/190?img=58"
-                alt=""
-                />
-            </div>
-            <h2 class="text-xl pt-2 font-medium text-gray-700">Pande Muliada</h2>
-            {/* <span class="text-blue-500 block mb-5">Front End Developer</span> */}
-            </div>
-        </div>
-
-
-
-        <div class="sm:w-1/4 p-1 focus:outline-none">
-            <div class="px-4 py-6 text-center">
-            <div class="mb-2">
-                <img
-                class="w-auto mx-auto rounded-full"
-                src="https://i.pravatar.cc/190?img=58"
-                alt=""
-                />
-            </div>
-            <h2 class="text-xl pt-2 font-medium text-gray-700">Pande Muliada</h2>
-            {/* <span class="text-blue-500 block mb-5">Front End Developer</span> */}
-            </div>
-        </div>
 
         
 
