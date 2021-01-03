@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 
 
-  let client = require("contentful").createClient({
+let client = require("contentful").createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-  });
+});
 
   export async function getStaticProps() {
       let data = await client.getEntries({
@@ -24,7 +24,7 @@ import Link from 'next/link'
       };
   }
   export default function Prodotti({products}) {
-      console.log(products);
+     
     return (
         <div>
             <div><h2>Il prodotto</h2></div>
