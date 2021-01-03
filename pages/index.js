@@ -30,6 +30,7 @@ export async function getStaticProps() {
 
 var settings = {
   dots: true,
+  lazyLoad: true,
   infinite: true,
   arrows: true,
   speed: 500,
