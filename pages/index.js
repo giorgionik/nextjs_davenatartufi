@@ -34,8 +34,8 @@ var settings = {
   infinite: true,
   arrows: true,
   speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToShow: 3,
+  slidesToScroll: 3,
   responsive: [
       {
           breakpoint: 1280,
@@ -132,16 +132,18 @@ console.log(products);
           <div className="bg-darker pt-20 md:grid md:grid-cols-2">
             <div className="pt-10 px-5 md:pl-0 md:col-start-2  md:mb-10">
               <div className="border-l-2 border-davena pl-7 pb-5">
-                <h2 className="font-playfair text-4xl py-5">Chi siamo</h2>
-                <p className="font-sourcesans mini:text-base text-xl font-medium text-gray-700">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad
-                  minim veniam, quis nostrud exercitation ullamco laboris nisi
-                  ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                  reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                  nulla pariatur.
+                <h2 className="font-playfair text-4xl font-medium text-gray-700 py-10">Chi siamo</h2>
+                <p className="font-sourcesans mini:text-base text-xl font-medium text-gray-700 pt-5">
+                  D’Avena Tartufi è sinonimo di qualità e professionalità. Da
+                  oltre 25 anni specializzati nel settore del luxury food e
+                  nella commercializzazione e produzione di <b>tartufi freschi</b> e
+                  preparati a base di tartufo, lavoriamo grossi quantitativi
+                  provenienti direttamente dai nostri “cavatori” e
+                  selezionatori di fiducia sparsi in tutto il mondo. Il
+                  commercio di questo nobile prodotto inizia grazie al padre di
+                  Marko. Cedo, infatti, affianca alla propria attività nella
+                  grande distribuzione la vendita di tartufi freschi provenienti
+                  dalla vicina regione dell’Istria.
                 </p>
                 <div className="flex font-sourcesans text-xl">
                   <div className="flex-initial border-2 border-davena p-2 my-8 font-medium text-gray-700">
@@ -192,19 +194,22 @@ console.log(products);
             alt="Marko Zobenica ceo"
           />
         </div> */}
-          <div className="py-8 md:px-10 md:py-10 md:bg-olio md:bg-right-top md:bg-no-repeat md:bg-60% md:my-20">
+          <div className="py-8 md:px-10 md:py-5 md:bg-olio md:bg-right-top md:bg-no-repeat md:bg-60% md:my-20">
             <div className="md:grid md:grid-cols-2 md:border-2 md:border-davena">
               <div>
-                <h2 className="font-playfair text-4xl px-10 md:pt-10">
+                <h2 className="font-playfair text-4xl px-10 md:pt-8 font-medium text-gray-700">
                   I nostri prodotti
                 </h2>
                 <p className="font-sourcesans mini:text-base text-xl font-medium text-gray-700 p-10">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad
-                  minim veniam, quis nostrud exercitation ullamco laboris nisi
-                  ut aliquip ex ea commodo consequat.
+                  I nostri tartufi hanno la particolarità di essere dei prodotti
+                  freschissimi in quanto vengono acquistati direttamente dai
+                  cosiddetti “cavatori”, ovvero dai cercatori e dai raccoglitori
+                  di tutto il mondo con prevalenza dal territorio italiano e
+                  dalla rinomata Regione confinante dell’Istria. Per
+                  realizzare le nostre preparazioni vengono utilizzate le più
+                  evolute tecniche e tecnologie alimentari così da mantenere il
+                  più possibile intatte le caratteristiche organolettiche che
+                  fanno di questo prodotto un alimento unico e prezioso.
                 </p>
                 <div className="flex font-sourcesans text-xl ml-10">
                   <div className="flex-initial border-2 border-davena p-2 mb-8 font-medium text-gray-700">
@@ -219,32 +224,30 @@ console.log(products);
           </div>
         </div>
 
-     
-
         <div className="mx-16">
           <Slider {...settings}>
-            {products.map(product => (
-            <div
-              key={product.sys.id}
-              className="sm:w-1/4 px-8 focus:outline-none"
-            >
-              <div className="px-1 py-6 text-center">
-                <div className="mb-2">
-                  <img
-                    className="rounded-full h-auto w-auto"
-                    src={`https:${product.fields.foto.fields.file.url}`}
-                    alt={product.fields.foto.fields.title}
-                  />
+            {products.map((product) => (
+              <div
+                key={product.sys.id}
+                className="sm:w-1/4 px-8 focus:outline-none"
+              >
+                <div className="px-1 py-6 text-center">
+                  <div className="mb-2">
+                    <img
+                      className="rounded-full h-auto w-auto"
+                      src={`https:${product.fields.foto.fields.file.url}`}
+                      alt={product.fields.foto.fields.title}
+                    />
+                  </div>
+                  <Link href={"/prodotti/" + product.fields.slug}>
+                    <a>
+                      <h2 className="font-sourcesans text-xl pt-2 font-medium text-gray-700">
+                        {product.fields.nomeProdotto}
+                      </h2>
+                    </a>
+                  </Link>
                 </div>
-                <Link href={"/prodotti/" + product.fields.slug}>
-                  <a>
-                    <h2 className="font-sourcesans text-xl pt-2 font-medium text-gray-700">
-                      {product.fields.nomeProdotto}
-                    </h2>
-                  </a>
-                </Link>
               </div>
-            </div>
             ))}
           </Slider>
         </div>
