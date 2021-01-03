@@ -7,6 +7,7 @@ import Link from 'next/link'
 export default function SimpleSlider(props) {
 
     console.log(props.prodotti);
+    let carass = props.prodotti;
 
   var settings = {
     dots: true,
@@ -52,6 +53,7 @@ export default function SimpleSlider(props) {
   };
   return (
    
+
 <div className="mx-16">
 
 
@@ -60,7 +62,7 @@ export default function SimpleSlider(props) {
 
 
 
-        {props.prodotti.map(product => (
+        {carass.map(product => (
 
         <div key={product.sys.id} class="sm:w-1/4 px-8 focus:outline-none">
             
