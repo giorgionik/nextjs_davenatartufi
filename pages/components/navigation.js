@@ -77,9 +77,9 @@ export default function Navigation() {
                 <animated.div
                   key={key}
                   style={props}
-                  className="fixed bg-white top-0 left-0 w-4/6 h-full z-50 shadow p-3"
+                  className="fixed bg-black top-0 left-0 w-4/6 h-full z-50 shadow p-3"
                 >
-                  <ul className="pt-5 text-2xl">
+                  <ul className="pt-5 text-2xl text-davena border-l-2 border-davena pl-5">
                     <li className="pb-3">
                       <Link href="/">
                         <a>Home</a>
