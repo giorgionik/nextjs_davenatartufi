@@ -82,6 +82,9 @@ console.log(products);
     <div>
       <Head>
         <title>D'Avena Tartufi</title>
+        <meta name="Description" content="D'Avena Tartufi, tartufi freschi tutto l'anno. Da
+                  oltre 25 anni specializzati nel settore del luxury food e
+                  nella commercializzazione e produzione di tartufi freschi"></meta>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
