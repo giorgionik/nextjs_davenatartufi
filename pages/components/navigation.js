@@ -79,7 +79,7 @@ export default function Navigation() {
                   style={props}
                   className="fixed bg-black top-0 left-0 w-4/6 h-full z-50 shadow p-3"
                 >
-                  <ul className="pt-5 text-2xl text-davena pl-5">
+                  <ul className="pt-5 font-sourcesans text-2xl text-davena pl-5">
                     <li className="pb-6">
                       <Link href="/">
                         <a>Home</a>

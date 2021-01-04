@@ -22,7 +22,7 @@ export default function Chisiamo() {
           <div className="bg-darker md:grid md:grid-cols-2 md:mt-10 md:pt-20 ">
     <div className="pt-1 px-5 md:pl-0 md:col-start-2 md:mb-10">
         <div className="border-l-2 border-davena pl-7 pb-5 ">
-        <h2 className="font-playfair text-4xl font-medium text-gray-700 py-10">Chi siamo</h2>
+        <h2 className="font-playfair text-4xl font-medium text-gray-700 py-5">Chi siamo</h2>
             <p className="font-sourcesans mini:text-base text-xl font-medium text-gray-700 pt-5">
               D’Avena Tartufi è sinonimo di qualità e professionalità. Da oltre 25
               anni specia- lizzati nel settore del luxury food e nella
@@ -58,7 +58,7 @@ export default function Chisiamo() {
     <div className="bg-darker md:grid md:grid-cols-2 md:mt-10 ">
     <div className="pt-1 px-5 md:pl-0 md:col-start-1 md:mb-10">
         <div className="border-l-2 border-davena pl-7 pb-5 ">
-        <h2 className="font-playfair text-4xl font-medium text-gray-700 py-10">Passione</h2>
+        <h2 className="font-playfair text-4xl font-medium text-gray-700 py-5">Passione</h2>
             <p className="font-sourcesans mini:text-base text-xl font-medium text-gray-700 pt-5">
               La passione e la conoscenza viene ben presto
               trasmessa al figlio Marko, il quale agli inizi del nuovo secolo si
@@ -94,7 +94,7 @@ export default function Chisiamo() {
     <div className="bg-darker md:grid md:grid-cols-2 md:mt-10 ">
     <div className="pt-1 px-5 md:pl-0 md:col-start-2 md:mb-10">
         <div className="border-l-2 border-davena pl-7 pb-5 ">
-        <h2 className="font-playfair text-4xl font-medium text-gray-700 py-10">Tradizione</h2>
+        <h2 className="font-playfair text-4xl font-medium text-gray-700 py-5">Tradizione</h2>
             <p className="font-sourcesans mini:text-base text-xl font-medium text-gray-700 pt-5">
               Attraverso i nostri distributori radicati sul
               territorio siamo in grado di consegnare in tempi brevissimi piccoli e

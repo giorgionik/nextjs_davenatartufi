@@ -90,8 +90,6 @@ console.log(products);
     <div>
       <Helmet>
         <html lang="it" />
-        
-        <description>D'Avena Tartufi Italia, pagina ufficiale</description>
       </Helmet>
 
       <Head>
@@ -150,7 +148,7 @@ console.log(products);
           <div className="bg-darker pt-20 md:grid md:grid-cols-2">
             <div className="pt-10 px-5 md:pl-0 md:col-start-2  md:mb-10">
               <div className="border-l-2 border-davena pl-7 pb-5">
-                <h2 className="font-playfair text-4xl font-medium text-gray-700 py-10">Chi siamo</h2>
+                <h2 className="font-playfair text-4xl font-medium text-gray-700 py-5">Chi siamo</h2>
                 <p className="font-sourcesans mini:text-base text-xl font-medium text-gray-700 pt-5">
                   D’Avena Tartufi è sinonimo di qualità e professionalità. Da
                   oltre 25 anni specializzati nel settore del luxury food e
