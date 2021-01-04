@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React, { useState } from 'react'
 import Header from './components/header'
-
+import { Helmet } from 'react-helmet'
 import Footer from './components/footer'
 import Link from 'next/link'
 import Slider from "react-slick";
@@ -10,6 +10,9 @@ let client = require("contentful").createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
+
+
+
 
 export async function getStaticProps() {
     let data = await client.getEntries({
@@ -75,12 +78,24 @@ var settings = {
 
 
 
+
+
 export default function Home({products}) {
 console.log(products);
 
+
   return (
+
+    
     <div>
+      <Helmet>
+        <html lang="it" />
+        
+        <description>D'Avena Tartufi Italia, pagina ufficiale</description>
+      </Helmet>
+
       <Head>
+        
         <title>D'Avena Tartufi</title>
         <meta name="Description" content="D'Avena Tartufi, tartufi freschi tutto l'anno. Da
                   oltre 25 anni specializzati nel settore del luxury food e
