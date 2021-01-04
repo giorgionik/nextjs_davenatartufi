@@ -79,23 +79,23 @@ export default function Navigation() {
                   style={props}
                   className="fixed bg-black top-0 left-0 w-4/6 h-full z-50 shadow p-3"
                 >
-                  <ul className="pt-5 text-2xl text-davena border-l-2 border-davena pl-5">
-                    <li className="pb-3">
+                  <ul className="pt-5 text-2xl text-davena pl-5">
+                    <li className="pb-6">
                       <Link href="/">
                         <a>Home</a>
                       </Link>
                     </li>
-                    <li className="pb-3">
+                    <li className="pb-6">
                       <Link href="/chisiamo">
                         <a>Chi siamo</a>
                       </Link>                      
                     </li>
-                    <li className="pb-3">
+                    <li className="pb-6">
                       <Link href="/prodotti">
                         <a>Prodotti</a>
                       </Link>  
                     </li>
-                    <li className="pb-3">
+                    <li className="pb-6">
                     <Link href="/contatto">
                         <a>Contatto</a>
                     </Link>                       
