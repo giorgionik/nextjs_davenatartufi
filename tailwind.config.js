@@ -15,6 +15,7 @@ module.exports = {
       backgroundColor: {
         'black-t-50': 'rgba(0,0,0,0.5)',
         'darker': '#CCCCCC',
+        
       },
       backgroundImage: {
         'hero-home': "url('https://res.cloudinary.com/niknet/image/upload/e_brightness_hsb:-60/v1609430036/davena%20tartufi/hero_comp_cmganq.jpg')",
@@ -35,6 +36,7 @@ module.exports = {
       },
       textColor: {
         'davena': '#C8A169',
+        'instagrad': 'linear-gradient(to right, red , blue)',
       }
 
     },
