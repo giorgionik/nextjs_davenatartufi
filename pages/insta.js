@@ -30,7 +30,7 @@ import React, { useState, useEffect } from 'react';
             class="rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none"
             id="search"
             type="text"
-            placeholder="Search"
+            placeholder="..enter post URL"
             value={term}
             onChange={(e) => setTerm(e.target.value)}
           ></input>
